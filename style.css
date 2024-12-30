@@ -26,3 +26,8 @@
     font-weight: 500;
     margin: 1.4rem 0 0.5rem;
 }
+.ride-container .box .bx:hover, 
+.ride-container .box .bxs-calendar-check{
+    background: var(--gradient);
+    color: #fff;
+}
