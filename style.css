@@ -18,4 +18,6 @@
     font-size: 2.5rem;
     padding: 10px;
     background:#eeeff1 ;
+    border-radius: 0.5rem;
+    color: var(--main-color);
 }
