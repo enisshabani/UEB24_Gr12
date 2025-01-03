@@ -102,3 +102,9 @@ ul {
     background-size: cover;
     background-position: 100% 100%;
   }
+  .footer-logo {
+    margin-bottom: 30px;
+  }
+  .footer-logo img {
+      max-width: 200px;
+  }
