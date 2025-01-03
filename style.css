@@ -108,3 +108,9 @@ ul {
   .footer-logo img {
       max-width: 200px;
   }
+  .footer-text p {
+    margin-bottom: 14px;
+    font-size: 14px;
+        color: #7e7e7e;
+    line-height: 28px;
+  }
