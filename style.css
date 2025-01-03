@@ -86,3 +86,7 @@ ul {
     font-weight: 600;
     margin-bottom: 2px;
   }
+  .cta-text span {
+    color: #757575;
+    font-size: 15px;
+  }
