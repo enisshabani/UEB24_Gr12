@@ -411,5 +411,10 @@ ul {
     border: 1px solid #ff5e14;
     top: 0;
 }
+.subscribe-form button i {
+  color: #fff;
+  font-size: 22px;
+  transform: rotate(-6deg);
+}
 
   
