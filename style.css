@@ -14,7 +14,18 @@
   --text-color: #444;
   --gradient: linear-gradient(#fe5b3d, #ffac38);
 }
+/*Stilizimi i Scroll bar */
 
+html::-webkit-scrollbar-track {
+  width: 0.5rem;
+}
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+html::-webkit-scrollbar-thumb {
+  background: var(--main-color);
+  border-radius: 5rem;
+}
 
 
 
