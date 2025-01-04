@@ -8,6 +8,12 @@
   text-decoration: none;
   font-family:Arial, Helvetica, sans-serif ;
 }
+:root{
+  --main-color: #fe5b3d;
+  --second-color: #ffac38;
+  --text-color: #444;
+  --gradient: linear-gradient(#fe5b3d, #ffac38);
+}
 
 
 
