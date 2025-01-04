@@ -29,6 +29,18 @@ html::-webkit-scrollbar-thumb {
 section{
   padding: 50px 100px;
 }
+header{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #eeeff1;
+  padding: 15px 100px;
+}
 
 
 
