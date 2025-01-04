@@ -109,6 +109,14 @@ header{
   bottom: 50%;
   position: absolute;
 }
+.text h1{
+  font-size: 5.5rem;
+  letter-spacing: 1px;
+  top:15%;
+}
+.text span{
+  color: var(--second-color);  
+}
 
 
 
