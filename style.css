@@ -50,6 +50,13 @@ header{
 .navbar li{
   position: relative;
 }
+.navbar a{
+  font-size: 1.3rem;
+  padding: 10px 20px;
+  color: var(--text-color);
+  font-weight: 500;
+}
+
 
 
 
