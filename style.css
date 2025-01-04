@@ -243,6 +243,10 @@ header{
   gap:1rem;
   margin-top:2rem;
 }
+.rev-img{
+  width:70px;
+  height: 70px;
+}
 
 /* About Us */
 ul {
