@@ -418,4 +418,10 @@ ul {
   transform: rotate(-6deg);
 }
 
- 
+/* Newsletter */
+.newsletter{
+  background: linear-gradient(to top right, #fe5b3d, #ffac38);
+  display: flex;
+  flex-directed: column;
+  align-items: center;
+}
