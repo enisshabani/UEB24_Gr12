@@ -85,6 +85,9 @@ header{
   color: #FFF;
   border-radius: 0.5rem;
 }
+.header-btn .sign-in:hover {
+  background: var(--main-color);
+}
 
 
 
