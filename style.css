@@ -425,3 +425,7 @@ ul {
   flex-directed: column;
   align-items: center;
 }
+.newsletter h2{
+  color: #fff;
+  font-size: 1.8rem;
+}
