@@ -159,6 +159,9 @@ header{
   font-size: 1rem;
   font-weight: 500;
 }
+.form-container form .btn:hover {
+  background: var(--main-color);
+}
 
 
 /* Ride */
