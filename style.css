@@ -272,6 +272,9 @@ header{
   .reviews-container .box p{
     font-style: italic;
 }
+.reviews-container .box .stars .bx{
+  color: var(--main-color);
+}
 
 /* About Us */
 ul {
