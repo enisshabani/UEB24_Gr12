@@ -56,7 +56,16 @@ header{
   color: var(--text-color);
   font-weight: 500;
 }
-
+.navbar a::after{
+  content: "";
+  width: 0;
+  height: 3px;
+  background: var(--gradient);
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  transition: 0.5s;
+}
 
 
 
