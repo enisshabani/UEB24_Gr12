@@ -264,6 +264,11 @@ header{
   box-shadow: 1px 4px 41px rgba(0, 0, 0, 0.1);
   border-radius: 0.5rem;
 }
+.reviews-container .box h2{
+  font-size:1.1rem;
+  font-weight: 600;
+  margin: 0.5rem 0 0.5rem;
+  }
 
 /* About Us */
 ul {
