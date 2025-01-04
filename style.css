@@ -44,6 +44,13 @@ header{
 .logo img{
   width: 40px;
 }
+.navbar{
+  display: flex;
+}
+.navbar li{
+  position: relative;
+}
+
 
 
 
