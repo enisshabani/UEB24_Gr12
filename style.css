@@ -392,3 +392,8 @@ ul {
     color: #878787;
     text-transform: capitalize;
   }
+  .subscribe-form {
+    position: relative;
+    overflow: hidden;
+  }
+  
