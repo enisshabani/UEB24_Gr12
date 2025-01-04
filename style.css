@@ -429,3 +429,22 @@ ul {
   color: #fff;
   font-size: 1.8rem;
 }
+.newsletter .box{
+  margin-top: 1rem;
+  background: #fff;
+  border-radius: 0.5rem;
+  padding: 4px 8px;
+  width: 350px;
+  display: flex;
+  justify-content: space-between;
+}
+.newsletter .box input{
+  border: none;
+  outline: none;
+}
+.newsletter .box .btn{
+  background: #474fa0;
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 0.5rem;
+}
