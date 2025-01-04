@@ -169,6 +169,10 @@ header{
   font-weight: 500;
   text-transform: uppercase;
 }
+.heading h1{
+  font-size: 2rem;
+}
+
 
 
 /* Ride */
