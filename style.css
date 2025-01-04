@@ -269,6 +269,9 @@ header{
   font-weight: 600;
   margin: 0.5rem 0 0.5rem;
   }
+  .reviews-container .box p{
+    font-style: italic;
+}
 
 /* About Us */
 ul {
