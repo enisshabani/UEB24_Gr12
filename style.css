@@ -69,6 +69,12 @@ header{
 .navbar a:hover::after{
   width: 100%;
 }
+#menu-icon{
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10001;
+  display: none;
+}
 
 
 
