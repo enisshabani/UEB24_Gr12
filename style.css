@@ -162,6 +162,13 @@ header{
 .form-container form .btn:hover {
   background: var(--main-color);
 }
+.heading{
+  text-align: center;
+}
+.heading span{
+  font-weight: 500;
+  text-transform: uppercase;
+}
 
 
 /* Ride */
