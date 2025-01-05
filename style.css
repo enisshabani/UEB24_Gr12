@@ -85,10 +85,23 @@ header{
   background: black;
   color: #FFF;
   border-radius: 0.5rem;
+  text-decoration: none;
 }
 .header-btn .sign-in:hover {
   background: var(--main-color);
 }
+.header-btn .sign-up{
+  background: #eeeff1;
+  color: #fe5b3d;
+  border: 1px  solid #fe5b3d;
+  border-radius: 0.5rem;
+  text-decoration: none;
+}
+.header-btn .sign-up:hover{
+  background: #fe5b3d;
+  color: #FFF;
+}
+
 /* Home */
 .home{
   width: 100%;
