@@ -559,3 +559,27 @@ ul {
       padding-top: 2rem;
   }
 }
+
+@media (max-width: 350px){
+  header{
+      padding: 4px 14px;
+  }
+  .logo img{
+      width: 30px;
+  }
+  section{
+      padding: 50px 14p ;
+  }
+  .heading-btn .sign-in{
+      padding: 7px 10px;
+      font-size: 14px;
+      font-weight: 400;
+  }
+  .text h1{
+      font-size: 2rem;
+  }
+  
+  .section-container{
+      grid-template-columns: repeat(auto-fit,minmax(254px,auto));
+  }
+}
