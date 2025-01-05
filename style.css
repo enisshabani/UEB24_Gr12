@@ -248,7 +248,7 @@ header{
 .services-container .box .btn:hover{
   background-color: #fff;
   color: #636bc4;
-  border-color: #636bc4;
+  border:1px solid #636bc4;
   transition: background-color 400ms, color 200ms;
 }
 
