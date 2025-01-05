@@ -547,3 +547,15 @@ ul {
   order: 2;
  }
 }
+
+@media (max-width: 568px){
+  .copyright{
+      flex-direction: column;
+  }
+  .newsletter .box{
+      width: 284px;
+  }
+  .form-container{
+      padding-top: 2rem;
+  }
+}
