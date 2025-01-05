@@ -236,6 +236,22 @@ header{
     object-position: center;
 }
 
+.services-container .box .btn{
+  display: flex;
+  justify-content: center;
+  background-color: #474fa0;
+  color: #FFF;
+  padding: 10px;
+  border-radius: 0.5rem;
+}
+
+.services-container .box .btn:hover{
+  background-color: #fff;
+  color: #636bc4;
+  border-color: #636bc4;
+  transition: background-color 400ms, color 200ms;
+}
+
 /* Review*/
 
 .reviews-container{
