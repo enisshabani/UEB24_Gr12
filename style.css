@@ -448,3 +448,13 @@ ul {
   padding: 8px 20px;
   border-radius: 0.5rem;
 }
+
+/* Making responsive*/
+@media (max-width: 991px){
+  header{
+      padding: 18px 40px;
+  }
+  section{
+      padding: 50px 40px;
+  }
+}
