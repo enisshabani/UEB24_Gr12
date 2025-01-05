@@ -474,3 +474,13 @@ ul {
       padding: 50px 40px;
   }
 }
+
+@media (max-width: 881px){
+  .home{
+      background-position: left;
+  }
+  .form-container form{
+  bottom: 0.2rem;
+  left: 40px;
+   }
+ }
