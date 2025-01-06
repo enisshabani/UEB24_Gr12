@@ -9,3 +9,9 @@ window.onscroll = () => {
     menu.classList.remove('bx-x');
     navbar.classList.remove('active');
 }
+const sr = ScrollReveal({
+    distance: '60px',
+    duration: 2500,
+    delay: 400,
+    reset: true
+})
