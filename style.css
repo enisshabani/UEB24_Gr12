@@ -672,3 +672,8 @@ body {
   background-color: #f4f4f9;
   color: #333;
 }
+.search-container {
+  max-width: 400px;
+  margin: 50px auto;
+  text-align: center;
+}
