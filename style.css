@@ -566,7 +566,7 @@ ul {
   left: 40px;
    }
  }
- @media (max-width: 768px){
+ @media (max-width: 828px){
   header{
       padding: 11px 40px;
  }
@@ -577,7 +577,7 @@ ul {
   display: none;
  }
  .text h1{
-  font-size: 2.5rem;
+  font-size: 3rem;
  }
  .home{
   grid-template-columns: 1fr;
