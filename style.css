@@ -198,17 +198,20 @@ h4{
 table{
   width:100%;
   table-layout: fixed;
+  /* border: 1px solid black; */
 }
 .tbl-header{
   background-color: black;
+  border-radius: 0.5rem;
  }
  .tbl-content{
-  height:300px;
+  height:20px;
   overflow-x:auto;
   margin-top: 0px;
   border: orangered;
 }
 th{
+  margin: 10px 20px;
   padding: 20px 15px;
   text-align: left;
   font-weight: 500;
@@ -221,7 +224,7 @@ td{
   text-align: left;
   vertical-align:middle;
   font-weight: 300;
-  font-size: 12px;
+  font-size: 15px;
   color: black;
   border-bottom: black;
 }
