@@ -74,6 +74,7 @@ const cars = [
         engine: "1.4L MultiAir Turbocharged Inline-4",
         horsepower: 164,
     },
+     
     {
         name: "AUDI",
         make: "Audi",
@@ -85,6 +86,7 @@ const cars = [
         engine: "3.0L V6 Turbocharged with Mild Hybrid",
         horsepower: 335,
     },
+
     {
         name: "TESLA",
         make: "Tesla",
@@ -96,6 +98,7 @@ const cars = [
         batteryCapacity: "100 kWh",
         horsepower: 1020,
     },
+
     {
         name: "HYUNDAI",
         make: "Hyundai",
@@ -107,6 +110,7 @@ const cars = [
         engine: "2.0L Turbocharged Inline-4",
         horsepower: 276,
     },
+
     {
         name: "MERCEDES-AMG",
         make: "Mercedes-Benz",
@@ -174,18 +178,18 @@ const cars = [
         horsepower: 204,
     }
 ];
+
+
 function searchCar() {
-    const carName = document.getElementById("car-name").value.trim().toUpperCase(); 
-    const car = cars.find((c) => c.name === carName);
+    const carName = document.getElementById("car-name").value.trim().toUpperCase();
+    const car = cars.find((c) => c.name === carName); 
 
     const specificationsContainer = document.getElementById("specifications-container");
     const carTable = document.getElementById("car-specifications");
-    const noResults = document.getElementById("no-results"); 
 
     if (car) {
-       
+    
         specificationsContainer.style.display = "block";
-        noResults.style.display = "none";
         carTable.innerHTML = `
             <tr><td><span class="label">MAKE:</span></td><td>${car.make}</td></tr>
             <tr><td><span class="label">MODEL:</span></td><td>${car.model}</td></tr>
@@ -196,26 +200,10 @@ function searchCar() {
             <tr><td><span class="label">ENGINE (CM3):</span></td><td>${car.engine}</td></tr>
             <tr><td><span class="label">HORSEPOWER (HP):</span></td><td>${car.horsepower}</td></tr>
         `;
-    }
-
-    else {
-        
+    } else {
+     
         specificationsContainer.style.display = "none";
-        noResults.style.display = "block";
-        noResults.innerText = "Car not found. Please try again.";
-    }
+        alert("Car not found. Please try again.");
+    }
 }
 
-const countdownEndDate = new Date("2025-01-10T00:00:00").getTime();
-
-function updateCountdown() {
-  const now = new Date().getTime();
-  const timeLeft = countdownEndDate - now;
-
-  const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-
-}
