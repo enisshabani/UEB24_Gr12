@@ -85,10 +85,23 @@ header{
   background: black;
   color: #FFF;
   border-radius: 0.5rem;
+  text-decoration: none;
 }
 .header-btn .sign-in:hover {
   background: var(--main-color);
 }
+.header-btn .sign-up{
+  background: #eeeff1;
+  color: #fe5b3d;
+  border: 1px  solid #fe5b3d;
+  border-radius: 0.5rem;
+  text-decoration: none;
+}
+.header-btn .sign-up:hover{
+  background: #fe5b3d;
+  color: #FFF;
+}
+
 /* Home */
 .home{
   width: 100%;
@@ -248,10 +261,29 @@ header{
 .services-container .box .btn:hover{
   background-color: #fff;
   color: #636bc4;
-  border-color: #636bc4;
+  border:1px solid #636bc4;
   transition: background-color 400ms, color 200ms;
 }
 
+.btn-services{
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  color: #474fa0;
+  border: 1px solid #474fa0;
+  padding: 20px 10px 20px;
+  margin: 30px 20%;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-services:hover{
+  background-color: #474fa0;
+  color: #fff;
+  transition: background-color 400ms, color 200ms;
+}
 /* Review*/
 
 .reviews-container{
