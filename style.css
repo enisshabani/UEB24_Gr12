@@ -728,7 +728,9 @@ body {
   font-weight: bold;
   color: #c00;
 }
-
+.specifications-table tr:last-child td {
+  border-bottom: none;
+}
 
 
 
