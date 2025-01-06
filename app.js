@@ -25,6 +25,22 @@ sr.reveal('.services-container .box',{delay: 400, origin: 'top'})
 sr.reveal('.about-container .box',{delay: 600, origin: 'top'})
 sr.reveal('.reviews-container',{delay: 600, origin: 'top'})
 
+const serviceBoxes = document.querySelectorAll(".services-container .box");
+
+serviceBoxes.forEach((box) => {
+    const img = box.querySelector(".box-img img");
+    const description = box.querySelector("p");
+
+    box.addEventListener("mouseenter", () => {
+        img.style.opacity = "0.5";
+        description.style.display = "block";
+    });
+
+    box.addEventListener("mouseleave", () => {
+        img.style.opacity = "1";
+        // Remove the line that hides the paragraph on mouseout
+    });
+});
 const cars = [
     {
         name: "AUDI",
