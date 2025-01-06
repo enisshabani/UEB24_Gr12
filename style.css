@@ -199,7 +199,9 @@ table{
   width:100%;
   table-layout: fixed;
 }
-
+.tbl-header{
+  background-color: black;
+ }
 
 
 
