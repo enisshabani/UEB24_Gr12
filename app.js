@@ -38,7 +38,6 @@ serviceBoxes.forEach((box) => {
 
     box.addEventListener("mouseleave", () => {
         img.style.opacity = "1";
-        // Remove the line that hides the paragraph on mouseout
     });
 });
 const cars = [
