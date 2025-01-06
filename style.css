@@ -470,7 +470,7 @@ ul {
 .newsletter{
   background: linear-gradient(to top right, #fe5b3d, #ffac38);
   display: flex;
-  flex-directed: column;
+  flex-direction: column;
   align-items: center;
 }
 .newsletter h2{
