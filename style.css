@@ -302,7 +302,7 @@ td{
 .services-container .box .btn{
   display: flex;
   justify-content: center;
-  background-color: #474fa0;
+  background-color: #000000;
   color: #FFF;
   padding: 10px;
   border-radius: 0.5rem;
@@ -310,8 +310,8 @@ td{
 
 .services-container .box .btn:hover{
   background-color: #fff;
-  color: #636bc4;
-  border:1px solid #636bc4;
+  color: #ff5e14;
+  border:1px solid #ff5e14;
   transition: background-color 400ms, color 200ms;
 }
 
@@ -320,8 +320,8 @@ td{
   display: flex;
   justify-content: center;
   background-color: #fff;
-  color: #474fa0;
-  border: 1px solid #474fa0;
+  color: #ff5e14;
+  border: 1px solid #ff5e14;
   padding: 20px 10px 20px;
   margin: 30px 20%;
   border-radius: 0.5rem;
@@ -330,7 +330,7 @@ td{
 }
 
 .btn-services:hover{
-  background-color: #474fa0;
+  background-color: #ff5e14;
   color: #fff;
   transition: background-color 400ms, color 200ms;
 }
@@ -675,13 +675,15 @@ h1{
   }
 }
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
+  
   margin: 0;
   padding: 0;
   background-color: #f4f4f9;
   color: #333;
 }
 .search-container {
+  color: #f97b32;
   max-width: 400px;
   margin: 50px auto;
   text-align: center;
@@ -697,14 +699,14 @@ body {
 .search-container button {
   padding: 10px 20px;
   font-size: 16px;
-  background-color: #007bff;
+  background-color: #f77b16;
   color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
 }
 .search-container button:hover {
-  background-color: #0056b3;
+  background-color: #000000;
 }
 .specifications-container {
   max-width: 600px;
