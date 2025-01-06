@@ -87,5 +87,18 @@ const cars = [
         engine: "1998",
         horsepower: 241,
     },
+    {
+        name: "FORD",
+        make: "Ford",
+        model: "Escape",
+        year: 2024,
+        mileage: "0", 
+        version: "ST-Line",
+        fuel: "Petrol",
+        engine: "1999",
+        horsepower: 250,
+    },
+
+
 
 
