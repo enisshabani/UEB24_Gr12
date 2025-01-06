@@ -9,4 +9,4 @@ const cars = [
         fuel: "Diesel",
         engine: "1900",
         horsepower: 200,
-    },
+    }
