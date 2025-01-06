@@ -109,6 +109,18 @@ const cars = [
         engine: "1997",
         horsepower: 246,
     },
+    {
+        name: "MERCEDES",
+        make: "Mercedes-Benz",
+        model: "E-Class",
+        year: 2024,
+        mileage: "0", 
+        version: "E 350 4MATIC",
+        fuel: "Petrol",
+        engine: "1999",
+        horsepower: 255,
+    },
+
 
 
 
