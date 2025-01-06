@@ -345,7 +345,6 @@
       <h2>Search Car Specifications</h2>
       <input type="text" id="car-name" placeholder="Enter car name (e.g., AUDI)" />
       <button onclick="searchCar()">Search</button>
-      <div id="no-results" style="display: none; margin-top: 10px; color: red; font-weight: bold;"></div>
   </div>
   <div class="specifications-container" id="specifications-container">
     <h3>Specifications</h3>
@@ -422,14 +421,30 @@
       </div>
     </section>
     
-    <!-- Newsletter-->
-    <section class="newsletter">
-      <h2>Subscribe To Newsletter</h2>
-      <div class="box">
-          <input type="text" placeholder="Enter Your Email...">
-          <a href ="#" class="btn">Subscribe</a>
+    <!-- Countdown-->
+     <section class="countdown">
+      <div class="countdown-container">
+        <h1>Special Offer Ends In:</h1>
+        <div class="countdown">
+        <div class="time-box">
+          <span id="days">00</span>
+          <p>Days</p>
+        </div>
+        <div class="time-box">
+          <span id="hours">00</span>
+          <p>Hours</p>
+        </div>
+        <div class="time-box">
+          <span id="minutes">00</span>
+          <p>Minutes</p>
+        </div>
+        <div class="time-box">
+          <span id="seconds">00</span>
+          <p>Seconds</p>
+         </div>
+        </div>
       </div>
-  </section>
+     </section>
 
     <!-- About US -->
     <footer class="footer-section" id="about">
