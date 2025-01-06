@@ -225,6 +225,11 @@ td{
   color: black;
   border-bottom: black;
 }
+/* for custom scrollbar for webkit browser*/
+      
+      ::-webkit-scrollbar {
+          width: 6px;
+      } 
 
 
 
