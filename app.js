@@ -156,6 +156,14 @@ function searchCar() {
         `;
     }
 
+    else {
+        // Fsheh specifikimet dhe shfaq mesazhin "Car not found"
+        specificationsContainer.style.display = "none";
+        noResults.style.display = "block";
+        noResults.innerText = "Car not found. Please try again.";
+    }
+}
+
 
 
 
