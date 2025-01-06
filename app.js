@@ -76,3 +76,16 @@ const cars = [
         engine: "2.0L Turbocharged Inline-4 with Electric Motor",
         horsepower: 671,
     },
+    {
+        name: "BMW",
+        make: "BMW",
+        model: "2-Series Gran Coupe",
+        year: 2024,
+        mileage: "0", 
+        version: "228i xDrive",
+        fuel: "Petrol",
+        engine: "1998",
+        horsepower: 241,
+    },
+
+
