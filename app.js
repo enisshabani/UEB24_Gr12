@@ -132,6 +132,13 @@ const cars = [
         horsepower: 204,
     },
 ];
+function searchCar() {
+    const carName = document.getElementById("car-name").value.trim().toUpperCase(); 
+    const car = cars.find((c) => c.name === carName);
+
+    const specificationsContainer = document.getElementById("specifications-container");
+    const carTable = document.getElementById("car-specifications");
+    const noResults = document.getElementById("no-results"); // Mesazhi për "Car not found"
 
 
 
