@@ -53,17 +53,6 @@ const cars = [
         horsepower: 200,
     },
     {
-        name: "ACURA",
-        make: "Acura",
-        model: "Integra Type S",
-        year: 2024,
-        mileage: "0",
-        version: "2.0 Turbo",
-        fuel: "Petrol",
-        engine: "1996",
-        horsepower: 320,
-    },
-    {
         name: "FIAT",
         make: "Fiat",
         model: "124 Spider",
@@ -123,6 +112,17 @@ const cars = [
         horsepower: 671,
     },
     {
+        name: "ACURA",
+        make: "Acura",
+        model: "Integra Type S",
+        year: 2024,
+        mileage: "0",
+        version: "2.0 Turbo",
+        fuel: "Petrol",
+        engine: "1996",
+        horsepower: 320,
+    },
+    {
         name: "BMW",
         make: "BMW",
         model: "2-Series Gran Coupe",
@@ -179,17 +179,17 @@ const cars = [
     }
 ];
 
-
 function searchCar() {
     const carName = document.getElementById("car-name").value.trim().toUpperCase();
     const car = cars.find((c) => c.name === carName); 
 
     const specificationsContainer = document.getElementById("specifications-container");
     const carTable = document.getElementById("car-specifications");
+    const errorMessage = document.getElementById("error-message");
 
     if (car) {
-    
         specificationsContainer.style.display = "block";
+        errorMessage.style.display = "none"; 
         carTable.innerHTML = `
             <tr><td><span class="label">MAKE:</span></td><td>${car.make}</td></tr>
             <tr><td><span class="label">MODEL:</span></td><td>${car.model}</td></tr>
@@ -201,9 +201,10 @@ function searchCar() {
             <tr><td><span class="label">HORSEPOWER (HP):</span></td><td>${car.horsepower}</td></tr>
         `;
     } else {
-     
-        specificationsContainer.style.display = "none";
-        alert("Car not found. Please try again.");
+        specificationsContainer.style.display = "block";
+        carTable.innerHTML = "";
+        errorMessage.style.display = "block"; 
+        errorMessage.textContent = "Car not found. Please try again.";
     }
 }
 
