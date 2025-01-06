@@ -190,8 +190,3 @@ function searchCar() {
         noResults.innerText = "Car not found. Please try again.";
     }
 }
-
-
-
-
-
