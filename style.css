@@ -208,6 +208,14 @@ table{
   margin-top: 0px;
   border: orangered;
 }
+th{
+  padding: 20px 15px;
+  text-align: left;
+  font-weight: 500;
+  font-size: 12px;
+  color: white;
+  text-transform: uppercase;
+}
 
 
 
