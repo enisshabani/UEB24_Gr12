@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign Up</title>
+        <link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+        </style>
+    </head>
+    <body>
+        <form action="index.html" method="post">
+
+            <h1>Sign Up</h1>
+
+            <fieldset>
+                <legend>Your info</legend>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="user_name" placeholder="username" required>
+
+                <label for="mail">Email:</label>
+                <input type="email" id="mail" name="user_email" placeholder="name@email.com" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="user_password" placeholder="password" required>
+
+                <label>Gender:</label>
+                <input type="radio" id="female" value="female" name="user_gender">
+                <label for="female" class="light">Female</label><br>
+
+                <input type="radio" id="male" value="male" name="user_gender">
+                <label for="male" class="light">Male</label><br>
+                <br>
+
+                <label>Age:</label>
+                <input type="radio" id="teenage" value="teenage" name="user_age">
+                <label for="teenage" class="light">0-18</label><br>
+                <input type="radio" id="adult" value="adult" name="user_age">
+                <label for="adult" class="light">19-30</label><br>
+                <input type="radio" id="senior" value="senior" name="user_age">
+                <label for="senior" class="light">31-65</label>
+            </fieldset>
+            <fieldset>
+                <legend>Your profile</legend>
+                <legend for="bio">Bio:</legend>
+                <textarea id="bio" name="user_bio"></textarea>
+            </fieldset>
+            <fieldset>
+                <label for="car">Select the brand you like:</label>
+                <select id="car" name="user_car">
+                    <option value="BMW">BMW</option>
+                    <option value="Hyundai">Hyundai</option>
+                    <option value="Tesla">Tesla</option>
+                    <option value="Audi">Audi</option>
+                    <option value="Mercedes">Mescedes</option>
+                    <option value="Alfa-Romeo">Alfa-Romeo</option>
+                    <option value="Ford">Ford</option>
+                    <option value="Jaguar">Jaguar</option>
+                    <option value="Volkswagen">Volkswagen</option>
+                </select>
+                
+            </fieldset>
+        </form>
+    </body>
+</html>
