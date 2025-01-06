@@ -140,7 +140,21 @@ function searchCar() {
     const carTable = document.getElementById("car-specifications");
     const noResults = document.getElementById("no-results"); // Mesazhi për "Car not found"
 
-
+    if (car) {
+       
+        specificationsContainer.style.display = "block";
+        noResults.style.display = "none";
+        carTable.innerHTML = `
+            <tr><td><span class="label">MAKE:</span></td><td>${car.make}</td></tr>
+            <tr><td><span class="label">MODEL:</span></td><td>${car.model}</td></tr>
+            <tr><td><span class="label">MADE YEAR:</span></td><td>${car.year}</td></tr>
+            <tr><td><span class="label">MILEAGE:</span></td><td>${car.mileage}</td></tr>
+            <tr><td><span class="label">VERSION:</span></td><td>${car.version}</td></tr>
+            <tr><td><span class="label">FUEL:</span></td><td>${car.fuel}</td></tr>
+            <tr><td><span class="label">ENGINE (CM3):</span></td><td>${car.engine}</td></tr>
+            <tr><td><span class="label">HORSEPOWER (HP):</span></td><td>${car.horsepower}</td></tr>
+        `;
+    }
 
 
 
