@@ -172,7 +172,7 @@ const cars = [
         fuel: "Hybrid (Petrol/Electric)",
         engine: "1993",
         horsepower: 204,
-    },
+    }
 ];
 function searchCar() {
     const carName = document.getElementById("car-name").value.trim().toUpperCase(); 
@@ -180,7 +180,7 @@ function searchCar() {
 
     const specificationsContainer = document.getElementById("specifications-container");
     const carTable = document.getElementById("car-specifications");
-    const noResults = document.getElementById("no-results"); // Mesazhi për "Car not found"
+    const noResults = document.getElementById("no-results"); 
 
     if (car) {
        
@@ -204,4 +204,11 @@ function searchCar() {
         noResults.style.display = "block";
         noResults.innerText = "Car not found. Please try again.";
     }
+}
+
+const countdownEndDate = new Date("2025-01-10T00:00:00").getTime();
+
+function updateCountdown() {
+  const now = new Date().getTime();
+  const timeLeft = countdownEndDate - now;
 }
