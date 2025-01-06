@@ -98,6 +98,18 @@ const cars = [
         engine: "1999",
         horsepower: 250,
     },
+    {
+        name: "JAGUAR",
+        make: "Jaguar",
+        model: "XF",
+        year: 2024,
+        mileage: "0",
+        version: "P250 R-Dynamic SE",
+        fuel: "Petrol",
+        engine: "1997",
+        horsepower: 246,
+    },
+
 
 
 
