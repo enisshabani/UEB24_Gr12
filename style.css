@@ -202,6 +202,12 @@ table{
 .tbl-header{
   background-color: black;
  }
+ .tbl-content{
+  height:300px;
+  overflow-x:auto;
+  margin-top: 0px;
+  border: orangered;
+}
 
 
 
