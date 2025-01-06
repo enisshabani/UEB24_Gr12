@@ -198,7 +198,6 @@ h4{
 table{
   width:100%;
   table-layout: fixed;
-  /* border: 1px solid black; */
 }
 .tbl-header{
   background-color: black;
@@ -271,7 +270,7 @@ td{
 .ride-container .box .bx:hover, 
 .ride-container .box .bxs-calendar-check{
     background: var(--gradient);
-    color: #fff;
+    color: #eeeff1;
 }
 
 /* Services */
