@@ -207,3 +207,9 @@ function searchCar() {
     }
 }
 
+const countdownEndDate = new Date("2025-01-10T00:00:00").getTime();
+
+function updateCountdown() {
+  const now = new Date().getTime();
+  const timeLeft = countdownEndDate - now;
+}
