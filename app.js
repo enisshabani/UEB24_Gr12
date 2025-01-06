@@ -54,3 +54,95 @@ const cars = [
         batteryCapacity: "100 kWh",
         horsepower: 1020,
     },
+    {
+        name: "HYUNDAI",
+        make: "Hyundai",
+        model: "Elantra N",
+        year: 2024,
+        mileage: "0",
+        version: "N",
+        fuel: "Petrol",
+        engine: "2.0L Turbocharged Inline-4",
+        horsepower: 276,
+    },
+    {
+        name: "MERCEDES-AMG",
+        make: "Mercedes-Benz",
+        model: "C63 S E Performance",
+        year: 2024,
+        mileage: "0",
+        version: "AMG C63 S E Performance",
+        fuel: "Hybrid (Petrol/Electric)",
+        engine: "2.0L Turbocharged Inline-4 with Electric Motor",
+        horsepower: 671,
+    },
+    {
+        name: "BMW",
+        make: "BMW",
+        model: "2-Series Gran Coupe",
+        year: 2024,
+        mileage: "0", 
+        version: "228i xDrive",
+        fuel: "Petrol",
+        engine: "1998",
+        horsepower: 241,
+    },
+    {
+        name: "FORD",
+        make: "Ford",
+        model: "Escape",
+        year: 2024,
+        mileage: "0", 
+        version: "ST-Line",
+        fuel: "Petrol",
+        engine: "1999",
+        horsepower: 250,
+    },
+    {
+        name: "JAGUAR",
+        make: "Jaguar",
+        model: "XF",
+        year: 2024,
+        mileage: "0",
+        version: "P250 R-Dynamic SE",
+        fuel: "Petrol",
+        engine: "1997",
+        horsepower: 246,
+    },
+    {
+        name: "MERCEDES",
+        make: "Mercedes-Benz",
+        model: "E-Class",
+        year: 2024,
+        mileage: "0", 
+        version: "E 350 4MATIC",
+        fuel: "Petrol",
+        engine: "1999",
+        horsepower: 255,
+    },
+    {
+        name: "HONDA",
+        make: "Honda",
+        model: "Civic Hybrid",
+        year: 2024,
+        mileage: "0", 
+        version: "EX-L Hybrid",
+        fuel: "Hybrid (Petrol/Electric)",
+        engine: "1993",
+        horsepower: 204,
+    },
+];
+function searchCar() {
+    const carName = document.getElementById("car-name").value.trim().toUpperCase(); 
+    const car = cars.find((c) => c.name === carName);
+
+    const specificationsContainer = document.getElementById("specifications-container");
+    const carTable = document.getElementById("car-specifications");
+    const noResults = document.getElementById("no-results"); // Mesazhi për "Car not found"
+
+
+
+
+
+
+
