@@ -186,6 +186,16 @@ header{
 .heading h1{
   font-size: 2rem;
 }
+/*table*/
+h4{
+  font-size: 30px;
+  color: #0c0b0b;
+  text-transform: uppercase;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
 
 
 
