@@ -120,6 +120,19 @@ const cars = [
         engine: "1999",
         horsepower: 255,
     },
+    {
+        name: "HONDA",
+        make: "Honda",
+        model: "Civic Hybrid",
+        year: 2024,
+        mileage: "0", 
+        version: "EX-L Hybrid",
+        fuel: "Hybrid (Petrol/Electric)",
+        engine: "1993",
+        horsepower: 204,
+    },
+];
+
 
 
 
