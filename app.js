@@ -14,7 +14,7 @@ const sr = ScrollReveal({
     distance: '60px',
     duration: 2500,
     delay: 400,
-    reset: true
+    reset: false
 })
 
 sr.reveal('.text',{delay: 200, origin: 'top'})
@@ -33,7 +33,7 @@ serviceBoxes.forEach((box) => {
 
     box.addEventListener("mouseenter", () => {
         img.style.opacity = "0.5";
-        description.style.display = "block";
+        // description.style.display = "block";
     });
 
     box.addEventListener("mouseleave", () => {

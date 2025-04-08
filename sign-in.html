@@ -6,45 +6,49 @@
   <title>Login Form in HTML and CSS</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-    * {
+
+/* Enis Morina*/ 
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
-    }
-    body {
+}
+body {
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 10px;
     display: flex;
-    background-image: url(./img/bmw.webp);
-    background-repeat: no-repeat;
+    background: #fe5b3d;
     justify-content: center;
-    background-size: cover;
-    justify-content: center;
-    color: #102450;
-    font-size: larger;
-
-    }
-    .login_form {
+    align-items: center;
+}
+.login_form {
     width: 100%;
     max-width: 435px;
-    background: #ff430486;
+    background: #fff;
     border-radius: 6px;
     padding: 41px 30px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-    }
-    .login_form h3 {
+}
+.login_form h3 {
     font-size: 20px;
     text-align: center;
-    }
-    .login_form .login_option {
+}
+
+/* Pia Mjeku */
+
+.login_form .login_option {
     display: flex;
     width: 100%;
     justify-content: space-between;
     align-items: center;
-   }
-   .login_form .login_option .option {
+}
+.login_form .login_option .option {
     width: calc(100% / 2 - 12px);
-   }
-   .login_form .login_option .option a {
+}
+.login_form .login_option .option a {
     height: 56px;
     display: flex;
     justify-content: center;
@@ -55,15 +59,15 @@
     border-radius: 5px;
     margin: 34px 0 24px 0;
     text-decoration: none;
-    color: #17165f;
-    font-weight: 200;
+    color: #171645;
+    font-weight: 500;
     transition: 0.2s ease;
-  }
-  .login_form .login_option .option a:hover {
+}
+.login_form .login_option .option a:hover {
     background: #ededf5;
     border-color: orangered;
-  }
-  .login_form .login_option .option a img {
+}
+.login_form .login_option .option a img {
     max-width: 25px;
 }
 .login_form p {
@@ -71,11 +75,13 @@
     font-weight: 500;
 }
 
+/* Rinesa Selmonaj */
 
-  .login_form .separator {
+.login_form .separator {
     position: relative;
     margin-bottom: 24px;
 }
+
 .login_form .separator span {
     background: #fff;
     z-index: 1;
@@ -97,89 +103,95 @@ form .input_box label {
     font-weight: 500;
     margin-bottom: 8px;
 }
+
+/*Rona Maxhuni*/
+
 form .input_box input {
-  width: 100%;
-  height: 57px;
-  border: 1px solid #DADAF2;
-  border-radius: 5px;
-  outline: none;
-  background: #F8F8FB;
-  font-size: 17px;
-  padding: 0px 20px;
-  margin-bottom: 25px;
-  transition: 0.2 ease;
+    width: 100%;
+    height: 57px;
+    border: 1px solid #DADAF2;
+    border-radius: 5px;
+    outline: none;
+    background: #F8F8FB;
+    font-size: 17px;
+    padding: 0px 20px;
+    margin-bottom: 25px;
+    transition: 0.2s ease;
 }
 form .input_box input:focus {
-  border-color: #626cd6;
+    border-color: #626cd6;
 }
-form .input_box .password_title{
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
+form .input_box .password_title {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
 }
-form .input_box{
-  position: relative;
+form .input_box {
+    position: relative;
 }
-a{
-  text-decoration: none;
-  color: orangered;
-  font-weight: 500;
+a {
+    text-decoration: none;
+    color:orangered;
+    font-weight: 500;
 }
-a:hover{
-  text-decoration: underline;
+a:hover {
+    text-decoration: underline;
 }
+
+/*Enis Shabani*/
+
 form button {
-  width: 100%;
-  height: 56px;
-  border-radius: 5px;
-  border: none;
-  outline: none;
-  background: black;
-  color: #fff;
-  font-size: 18px;
-  font-weight: 500;
-  text-transform: uppercase;
-  cursor: pointer;
-  margin-bottom: 28px;
-  transition: 0.3s ease;
+    width: 100%;
+    height: 56px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background: black;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-bottom: 28px;
+    transition: 0.3s ease;
 }
-
-form button:hover{
-  background-color: orange;
+form button:hover {
+    background: orange;
 }
-
   </style>
-  
 </head>
 <body>
-    <div class="login_form">
-        <form action="#">
-          <h3>Log in with</h3>
-          <div class="login_option">
-            <!-- Google button -->
-            <div class="option">
-              <a href="#">
-                <img src="img/google.png" alt="Google" />
-                <span>Google</span>
-              </a>
-            </div>
-            <!-- Apple button -->
-          <div class="option">
-            <a href="#">
-              <img src="img/apple.png" alt="Apple" />
-              <span>Apple</span>
-            </a>
-          </div>
+  <div class="login_form">
+    <!-- Login form container -- Enis Morina -->
+    
+    <form action="sign-in.php" method="POST">
+      <h3>Log in with</h3>
+      <div class="login_option">
+        <!-- Google button -->
+        <div class="option">
+          <a href="#">
+            <img src="img/google.png" alt="Google" />
+            <span>Google</span>
+          </a>
         </div>
-        <!-- Login option separator -->
+        <!-- Apple button -->
+        <div class="option">
+          <a href="#">
+            <img src="img/apple.png" alt="Apple" />
+            <span>Apple</span>
+          </a>
+        </div>
+      </div>
+      <!-- Login option separator -->
       <p class="separator">
         <span>or</span>
       </p>
 
-      <!-- Email input box -->
+      <!-- Email input box -- Enis Shabani -->
+
       <div class="input_box">
         <label for="email">Email</label>
-        <input type="email" id="email" placeholder="Enter email address" required />
+        <input type="email" name="email" id="email" placeholder="Enter email address" required />
       </div>
       <!-- Paswwrod input box -->
       <div class="input_box">
@@ -187,11 +199,11 @@ form button:hover{
           <label for="password">Password</label>
           <a href="#">Forgot Password?</a>
         </div>
-        <input type="password" id="password" placeholder="Enter your password" required />
+        <input type="password" name="password" id="password" placeholder="Enter your password" required />
       </div>
-      <!-- Login button -->
+       <!-- Login button -->
       <button type="submit">Log In</button>
-      <p class="sign_up">Don't have an account? <a href="sign-up.html">Sign up</a></p>
+      <p class="sign_up">Don't have an account? <a href="#">Sign up</a></p>
     </form>
   </div>
 </body>
