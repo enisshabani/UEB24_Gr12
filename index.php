@@ -1,3 +1,6 @@
+$loggedInUser = "Guest";
+$title = "Looking";
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
