@@ -208,7 +208,7 @@ function searchCar() {
     }
 }
 
-const countdownEndDate = new Date("2026-01-10T00:00:00").getTime();
+const countdownEndDate = new Date("2025-05-10T00:00:00").getTime();
 
 function updateCountdown() {
   const now = new Date().getTime();
