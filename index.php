@@ -96,7 +96,16 @@
         <div class="tbl-content"></div>
         <table cellpadding="0" cellspacing="0" border="0">
           <tbody>
-            
+          <?php foreach ($customers as $customer): ?>
+            <tr>
+                <td><?= htmlspecialchars($customer['code']) ?></td>
+                <td><?= htmlspecialchars($customer['name']) ?></td>
+                <td><?= htmlspecialchars($customer['surname']) ?></td>
+                <td><?= htmlspecialchars($customer['car']) ?></td>
+                <td><?= htmlspecialchars($customer['price']) ?></td>
+                <td><?= htmlspecialchars($customer['date']) ?></td>
+            </tr>
+            <?php endforeach;?>
           </tbody>
         </table>
     </section>
