@@ -24,6 +24,7 @@ class User {
     public function setPassword($password) {
         $this->password = $password;
     }
+    
 class Admin extends User {
     private $role;
 
@@ -31,5 +32,13 @@ class Admin extends User {
         parent::__construct($username, $password);
         $this->role = $role;
     }
+     public function getRole() {
+        return $this->role;
+    }
+
+    public function setRole($role) {
+        $this->role = $role;
+    }
+
 }
 
