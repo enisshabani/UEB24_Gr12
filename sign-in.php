@@ -39,6 +39,16 @@ class Admin extends User {
     public function setRole($role) {
         $this->role = $role;
     }
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $email = $_POST['email'] ?? '';
+    $password = $_POST['password'] ?? '';
 
+    $user = new User($email, $password);
+
+    echo "<h3>Te dhenat e futura:</h3>";
+    echo "Email: " . htmlspecialchars($user->getUsername()) . "<br>";
+    echo "Password: " . htmlspecialchars($user->getPassword()) . "<br>";
 }
+?>
+
 
