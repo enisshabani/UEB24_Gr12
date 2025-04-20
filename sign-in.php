@@ -24,5 +24,12 @@ class User {
     public function setPassword($password) {
         $this->password = $password;
     }
+class Admin extends User {
+    private $role;
+
+    public function __construct($username, $password, $role) {
+        parent::__construct($username, $password);
+        $this->role = $role;
+    }
 }
 
