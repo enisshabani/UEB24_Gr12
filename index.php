@@ -128,7 +128,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
   }
 ?>
-        <form action="">
+        <form action="" method="post">
           <div class="input-box">
             <span>Location</span>
             <input type="search" name="" id="" placeholder="Search Places" />
