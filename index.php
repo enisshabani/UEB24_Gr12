@@ -7,6 +7,10 @@ $customers = [
 ];
 usort($customers, fn($a, $b) => $a["price"] <=> $b["price"]);
 $total = array_reduce($customers, fn($carry, $c) => $carry + $c["price"], 0);
+$company = "RentACar";
+$tagline = "Ultimate Travel Experience";
+$fullTagline = strtoupper($company . " - " . $tagline);
+
 
 <!DOCTYPE html>
 <html lang="en">
