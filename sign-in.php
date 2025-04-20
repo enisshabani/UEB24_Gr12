@@ -200,6 +200,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
     </head>
     <body>
+         <?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $default_email = "test@gmail.com";
+
+    
+    if (preg_match(
+        '/^[a-zA-Z0-9-.]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$/',
+        $email
+    )) {
+        
+        if ($email === $default_email) {
+            echo "Email adresa është valide dhe përputhet me default email.";
+            
+        } else {
+            echo "Email adresa është valide, por nuk përputhet me default email.";
+        }
+    } else {
+        echo "Email adresa nuk është valide.";
+    }
+}
+?>
 
       <form action="sign-up.php" method="post">
       
