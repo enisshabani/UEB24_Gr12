@@ -106,6 +106,28 @@ echo "Çmimi normal për makinat është: $" . number_format($normalPrice, 2);
     </section>
 
       <div class="form-container">
+          <?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $location = trim($_POST['location']);
+    $default_location = "Kosovo";
+
+    
+    if (preg_match(
+        '/^[a-zA-Z\s-]+$/',
+        $location
+    )) {
+       
+        if (strcasecmp($location, $default_location) === 0) {
+            echo "Lokacioni është valid dhe përputhet me lokacionin e paracaktuar 'Kosovo'.<br>";
+            
+        } else {
+            echo "Lokacioni ekziston, por nuk përputhet me lokacionet ku ne japim sherbime.<br>";
+        }
+    } else {
+        echo "Lokacioni nuk është valid. Përdorni vetëm shkronja, hapësira ose viza.<br>";
+    }
+  }
+?>
         <form action="">
           <div class="input-box">
             <span>Location</span>
