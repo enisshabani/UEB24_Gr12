@@ -6,6 +6,7 @@
     <title>Car Rental Website</title>
     <!--Link per Css-->
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="index.php">
 
     <!-- BootStrap -->
 
@@ -434,4 +435,3 @@
     <script src="app.js"></script>
   </body>
 </html>
-``` 
