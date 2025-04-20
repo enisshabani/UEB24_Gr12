@@ -24,7 +24,7 @@ class User {
     public function setPassword($password) {
         $this->password = $password;
     }
-    
+ } 
 class Admin extends User {
     private $role;
 
@@ -39,6 +39,7 @@ class Admin extends User {
     public function setRole($role) {
         $this->role = $role;
     }
+}
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'] ?? '';
     $password = $_POST['password'] ?? '';
