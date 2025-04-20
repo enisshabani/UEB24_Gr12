@@ -24,6 +24,11 @@ $multiArray = [
     ["brand" => "BMW", "type" => "SUV"],
     ["brand" => "Tesla", "type" => "Electric"]
 ];
+sort($carTypes);
+arsort($carTypes); 
+ksort($assocCar);
+$GLOBALS["admin_email"] = "admin@rentacar.com";
+
 ?>
 
 
