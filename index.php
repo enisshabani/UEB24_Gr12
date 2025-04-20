@@ -1,4 +1,5 @@
-<?php $loggedInUser = "Guest";
+<?php
+$loggedInUser = "Guest";
 $title = "Looking";
 $customers = [
     ["code" => "AAC", "name" => "Enis", "surname" => "Morina", "price" => 30.00, "date" => "04/12/2024"],
@@ -18,6 +19,7 @@ $totalPrice = $carCount * $pricePerDay * (1 + $taxRate);
 $status = $carCount > 10 ? "Sufficient stock available" : "Limited cars available";
 
 $carTypes = ["Sedan", "SUV", "Convertible", "Truck"];
+$assocCar = ["brand" => "Audi", "model" => "A6", "price" => 58000];
 ?>
 
 
