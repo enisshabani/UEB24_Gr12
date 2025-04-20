@@ -20,6 +20,10 @@ $status = $carCount > 10 ? "Sufficient stock available" : "Limited cars availabl
 
 $carTypes = ["Sedan", "SUV", "Convertible", "Truck"];
 $assocCar = ["brand" => "Audi", "model" => "A6", "price" => 58000];
+$multiArray = [
+    ["brand" => "BMW", "type" => "SUV"],
+    ["brand" => "Tesla", "type" => "Electric"]
+];
 ?>
 
 
