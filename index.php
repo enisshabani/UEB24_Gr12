@@ -10,6 +10,12 @@ $total = array_reduce($customers, fn($carry, $c) => $carry + $c["price"], 0);
 $company = "RentACar";
 $tagline = "Ultimate Travel Experience";
 $fullTagline = strtoupper($company . " - " . $tagline);
+$carCount = 12;
+$pricePerDay = 35.50;
+$taxRate = 0.18;
+$totalPrice = $carCount * $pricePerDay * (1 + $taxRate);
+
+$status = $carCount > 10 ? "Sufficient stock available" : "Limited cars available";
 
 
 <!DOCTYPE html>
