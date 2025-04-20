@@ -7,4 +7,9 @@ class User {
         $this->username = $username;
         $this->password = $password;
     }
+    public function __destruct() {
+    }
+    public function getUsername() {
+        return $this->username;
+    }
 }
