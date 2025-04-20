@@ -1,14 +1,12 @@
-$loggedInUser = "Guest";
+oggedInUser = "Guest";
 $title = "Looking";
-
 $customers = [
     ["code" => "AAC", "name" => "Enis", "surname" => "Morina", "price" => 30.00, "date" => "04/12/2024"],
     ["code" => "AAD", "name" => "Enkel", "surname" => "Sejdiu", "price" => 60.00, "date" => "22/11/2024"],
     ["code" => "AAX", "name" => "Redon", "surname" => "Hoxha", "price" => 90.00, "date" => "23/07/2024"],
 ];
-
 usort($customers, fn($a, $b) => $a["price"] <=> $b["price"]);
-
+$total = array_reduce($customers, fn($carry, $c) => $carry + $c["price"], 0);
 
 <!DOCTYPE html>
 <html lang="en">
