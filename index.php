@@ -7,6 +7,8 @@ $customers = [
     ["code" => "AAX", "name" => "Redon", "surname" => "Hoxha", "price" => 90.00, "date" => "23/07/2024"],
 ];
 
+usort($customers, fn($a, $b) => $a["price"] <=> $b["price"]);
+
 
 <!DOCTYPE html>
 <html lang="en">
