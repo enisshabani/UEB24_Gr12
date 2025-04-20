@@ -1,4 +1,4 @@
-oggedInUser = "Guest";
+$loggedInUser = "Guest";
 $title = "Looking";
 $customers = [
     ["code" => "AAC", "name" => "Enis", "surname" => "Morina", "price" => 30.00, "date" => "04/12/2024"],
