@@ -41,7 +41,7 @@ $customers = [
     ["code" => "AAK", "name" => "Flora", "surname" => "Dervishi", "car" => "Chevrolet", "price" => 40000, "date" => "18/12/2024"],
 ];
 $normalPrice = 50000; // Çmimi normal i paracaktuar
-echo "Çmimi normal për makinat është: $" . number_format($normalPrice, 2);
+echo "Çmimi normal për makinat është: $" . number_format($normalPrice,2);
 
 ?>
 
