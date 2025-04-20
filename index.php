@@ -28,6 +28,18 @@ sort($carTypes);
 arsort($carTypes); 
 ksort($assocCar);
 $GLOBALS["admin_email"] = "admin@rentacar.com";
+$customers = [
+    ["code" => "AAC", "name" => "Enis", "surname" => "Morina", "car" => "Audi", "price" => 30000, "date" => "04/12/2024"],
+    ["code" => "AAD", "name" => "Enkel", "surname" => "Sejdiu", "car" => "BMW", "price" => 60000, "date" => "22/11/2024"],
+    ["code" => "AAX", "name" => "Redon", "surname" => "Hoxha", "car" => "Tesla", "price" => 90000, "date" => "23/07/2024"],
+    ["code" => "AAE", "name" => "Arta", "surname" => "Krasniqi", "car" => "Mercedes", "price" => 75000, "date" => "15/08/2024"],
+    ["code" => "AAF", "name" => "Blerim", "surname" => "Gashi", "car" => "Volkswagen", "price" => 45000, "date" => "10/10/2024"],
+    ["code" => "AAG", "name" => "Dafina", "surname" => "Berisha", "car" => "Hyundai", "price" => 32000, "date" => "05/05/2024"],
+    ["code" => "AAH", "name" => "Luan", "surname" => "Shala", "car" => "Ford", "price" => 28000, "date" => "20/03/2024"],
+    ["code" => "AAI", "name" => "Rina", "surname" => "Hoti", "car" => "Jaguar", "price" => 67000, "date" => "12/09/2024"],
+    ["code" => "AAJ", "name" => "Arben", "surname" => "Rexha", "car" => "Alfa Romeo", "price" => 52000, "date" => "30/06/2024"],
+    ["code" => "AAK", "name" => "Flora", "surname" => "Dervishi", "car" => "Chevrolet", "price" => 40000, "date" => "18/12/2024"],
+];
 
 ?>
 
