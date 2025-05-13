@@ -12,7 +12,7 @@ class User {
     public function getUsername() {
         return $this->username;
     }
-    
+
     public function setUsername($username) {
         $this->username = $username;
     }
@@ -24,7 +24,7 @@ class User {
     public function setPassword($password) {
         $this->password = $password;
     }
- } 
+ }
 class Admin extends User {
     private $role;
 
@@ -40,15 +40,32 @@ class Admin extends User {
         $this->role = $role;
     }
 }
+
+$output = '';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'] ?? '';
     $password = $_POST['password'] ?? '';
 
     $user = new User($email, $password);
 
-    echo "<h3>Te dhenat e futura:</h3>";
-    echo "Email: " . htmlspecialchars($user->getUsername()) . "<br>";
-    echo "Password: " . htmlspecialchars($user->getPassword()) . "<br>";
+    $output .= "<h3>Te dhenat e futura:</h3>";
+    $output .= "Email: " . htmlspecialchars($user->getUsername()) . "<br>";
+    $output .= "Password: " . htmlspecialchars($user->getPassword()) . "<br>";
+
+    $default_email = "test@gmail.com";
+
+    if (preg_match(
+        '/^[a-zA-Z0-9-.]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$/',
+        $email
+    )) {
+        if ($email === $default_email) {
+            $output .= "Email adresa është valide dhe përputhet me default email.";
+        } else {
+            $output .= "Email adresa është valide, por nuk përputhet me default email.";
+        }
+    } else {
+        $output .= "Email adresa nuk është valide.";
+    }
 }
 ?>
 
@@ -60,9 +77,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <title>Login Form in HTML and CSS</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
-/* Enis Morina*/ 
-
 * {
     margin: 0;
     padding: 0;
@@ -212,91 +226,60 @@ form button {
 form button:hover {
     background: orange;
 }
-  </style>
-
-         <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = $_POST['email'];    
-    $password = $_POST['password'];
-    $default_email = "test@gmail.com";
-
-    
-    if (preg_match(
-        '/^[a-zA-Z0-9-.]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$/',
-        $email
-    )) {
-        
-        if ($email === $default_email) {
-            echo "Email adresa është valide dhe përputhet me default email.";
-            
-        } else {
-            echo "Email adresa është valide, por nuk përputhet me default email.";
-        }
-    } else {
-        echo "Email adresa nuk është valide.";
-    }
+.output {
+    margin-top: 20px;
+    text-align: center;
+    color: #333;
 }
-?>
-
-      <form action="sign-up.php" method="post">
-      
-        <h1>Sign Up</h1>
-        
-        <fieldset>
-          <legend>Your info</legend>
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="user_name" placeholder="username" required>
-          
-          <label for="mail">Email:</label>
-          <input type="email" id="mail" name="user_email" placeholder="name@email.com" required>
-          
-          <label for="password">Password:</label>
-          <input type="password" id="password" name="user_password" placeholder="password" required>
-          
-          <label>Gender:</label>
-          <input type="radio" id="female" value="female" name="user_gender"><label for=female" class="light">Female</label><br>
-          <input type="radio" id="male" value="male" name="user_gender"><label for="male" class="light">Male</label><br>
-          <br>
-          <label>Age:</label>
-          <input type="radio" id="teenage" value="Teenage" name="user_age"><label for="teenage" class="light">0-18</label><br>
-          <input type="radio" id="adult" value="Adult" name="user_age"><label for="adult" class="light">19-30</label><br>
-          <input type="radio" id="senior" value="Senior" name="user_age"><label for="senior" class="light">31-65</label>
-        </fieldset>
-        
-        <fieldset>
-          <legend>Your profile</legend>
-          <label for="bio">Bio:</label>
-          <textarea id="bio" name="user_bio"></textarea>
-        </fieldset>
-        <fieldset>
-        <label for="car">Select the brand you like:</label>
-        <select id="car" name="user_car">
-            <option value="BMW">BMW</option>
-            <option value="Hyundai">Hyundai</option>
-            <option value="Tesla">Tesla</option>
-            <option value="Audi"> Audi</option>
-            <option value="Mercedes">Mercedes</option>
-            <option value="Alfa-Romeo">Alfa-Romeo</option>
-            <option value="Ford">Ford</option>
-            <option value="Jaguar">Jaguar</option>
-            <option value="Volkswagen">Volkswagen</option>
-        </select>
-        
-          <label>Interests:</label>
-          <input type="checkbox" id="suvs" value="interest_development" name="user_interest"><label class="light" for="development">SUVs</label><br>
-          <input type="checkbox" id="sport" value="interest_design" name="user_interest"><label class="light" for="design">Sport Cars</label><br>
-          <input type="checkbox" id="electrical" value="interest_business" name="user_interest"><label class="light" for="business">Electrical Vehicles</label><br>
-          <input type="checkbox" id="sudan" value="interest_business" name="user_interest"><label class="light" for="business">Sedans</label>
-
-          <label for="admin">Are you an administrator?</label>
-          <input type="radio" name="user_role" id="user_role" value="Yes"><label for="">Yes</label>
-          <input type="radio" name="user_role" id="user_role" value="No"><label>No</label>
-        </fieldset>
-        <button type="submit">Sign Up</button>
-        <p class="sign-in">I have an account! <a href="sign-in.html">Sign In</a></p>
-      </form>
-      
-    </body>
-</html>
+  </style>
+    </head>
+    <body>
+          <div class="login_form">
+    <!-- Login form container -- Enis Morina -->
+    <form action="#" method="POST">
+      <h3>Log in with</h3>
+      <div class="login_option">
+        <!-- Google button -->
+        <div class="option">
+          <a href="#">
+            <img src="img/google.png" alt="Google" />
+            <span>Google</span>
+          </a>
+        </div>
+        <!-- Apple button -->
+        <div class="option">
+          <a href="#">
+            <img src="img/apple.png" alt="Apple" />
+            <span>Apple</span>
+          </a>
+        </div>
+      </div>
+      <!-- Login option separator -->
+      <p class="separator">
+        <span>or</span>
+      </p>
+      <!-- Email input box -- Enis Shabani -->
+      <div class="input_box">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="Enter email address" required />
+      </div>
+      <!-- Paswwrod input box -->
+      <div class="input_box">
+        <div class="password_title">
+          <label for="password">Password</label>
+          <a href="#">Forgot Password?</a>
+        </div>
+        <input type="password" name="password" id="password" placeholder="Enter your password" required />
+      </div>
+       <!-- Login button -->
+      <button type="submit">Log In</button>
+      <p class="sign_up">Don't have an account? <a href="sign-up.php">Sign up</a></p>
+    </form>
+    <?php if ($output): ?>
+        <div class="output">
+            <?php echo $output; ?>
+        </div>
+    <?php endif; ?>
+  </div>
 </body>
 </html>

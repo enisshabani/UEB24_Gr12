@@ -77,6 +77,8 @@ class Admin extends User {
     }
 }
 
+$output = "";
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['user_name'] ?? '';
     $email = $_POST['user_email'] ?? '';
@@ -88,23 +90,50 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($role === "Yes") {
         $admin = new Admin($username, $email, $password, $gender, $car, $age, $role);
-        echo "<h3>Te dhenat e futura (Per admin):</h3>";
-        echo "Username: " . htmlspecialchars($admin->getUsername()) . "<br>";
-        echo "Email: " . htmlspecialchars($admin->getEmail()) . "<br>";
-        echo "Password: " . htmlspecialchars($admin->getPassword()) . "<br>";
-        echo "Gender: " . htmlspecialchars($admin->getGender()) . "<br>";
-        echo "Car: " . htmlspecialchars($admin->getCar()) . "<br>";
-        echo "Age: " . htmlspecialchars($admin->getAge()) . "<br>";
-        echo "Role: " . htmlspecialchars($admin->getRole()) . "<br>";
+        $output .= "<h3>Te dhenat e futura (Per admin):</h3>";
+        $output .= "Username: " . htmlspecialchars($admin->getUsername()) . "<br>";
+        $output .= "Email: " . htmlspecialchars($admin->getEmail()) . "<br>";
+        $output .= "Password: " . htmlspecialchars($admin->getPassword()) . "<br>";
+        $output .= "Gender: " . htmlspecialchars($admin->getGender()) . "<br>";
+        $output .= "Car: " . htmlspecialchars($admin->getCar()) . "<br>";
+        $output .= "Age: " . htmlspecialchars($admin->getAge()) . "<br>";
+        $output .= "Role: " . htmlspecialchars($admin->getRole()) . "<br>";
     } else {
         $user = new User($username, $email, $password, $gender, $car, $age);
-        echo "<h3>Te dhenat e futura:</h3>";
-        echo "Username: " . htmlspecialchars($user->getUsername()) . "<br>";
-        echo "Email: " . htmlspecialchars($user->getEmail()) . "<br>";
-        echo "Password: " . htmlspecialchars($user->getPassword()) . "<br>";
-        echo "Gender: " . htmlspecialchars($user->getGender()) . "<br>";
-        echo "Car: " . htmlspecialchars($user->getCar()) . "<br>";
-        echo "Age: " . htmlspecialchars($user->getAge()) . "<br>";
+        $output .= "<h3>Te dhenat e futura:</h3>";
+        $output .= "Username: " . htmlspecialchars($user->getUsername()) . "<br>";
+        $output .= "Email: " . htmlspecialchars($user->getEmail()) . "<br>";
+        $output .= "Password: " . htmlspecialchars($user->getPassword()) . "<br>";
+        $output .= "Gender: " . htmlspecialchars($user->getGender()) . "<br>";
+        $output .= "Car: " . htmlspecialchars($user->getCar()) . "<br>";
+        $output .= "Age: " . htmlspecialchars($user->getAge()) . "<br>";
+    }
+
+    // Email regex validation
+    if (!preg_match(
+        '/^[a-zA-Z0-9-.]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/',
+        $email
+    )) {
+        $output .= "Email adresa nuk është valide.<br>";
+    } else {
+        $output .= "Email adresa është valide.<br>";
+    }
+
+    // Password regex validation
+    // Check if password contains only letters
+    if (preg_match('/^[a-zA-Z]+$/', $password)) {
+        $output .= "Fjalëkalimi përmban vetëm shkronja. Ju lutem shtoni numra.<br>";
+    }
+    // Check if password contains only numbers
+    elseif (preg_match('/^[0-9]+$/', $password)) {
+        $output .= "Fjalëkalimi përmban vetëm numra. Ju lutem shtoni shkronja.<br>";
+    }
+    // Check if password contains both letters and numbers
+    elseif (preg_match('/^[a-zA-Z0-9]+$/', $password)) {
+        $output .= "Fjalëkalimi është valide (përmban shkronja dhe numra).<br>";
+        // Add further processing logic here if needed
+    } else {
+        $output .= "Fjalëkalimi nuk është valide. Përdorni vetëm shkronja dhe numra.<br>";
     }
 }
 
@@ -125,17 +154,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             box-sizing: border-box;
             font-family: "Montserrat", sans-serif;
         }
-        
+
         body {
             width: 100%;
             min-height: 100vh;
             padding: 20px;
             display: flex;
+            flex-direction: column;
             background: #fe5b3d;
             justify-content: center;
             align-items: center;
         }
-          
+
         form {
             width: 100%;
             max-width: 435px;
@@ -144,12 +174,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             padding: 41px 30px;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
         }
-          
+
         h1 {
             margin: 0 0 30px 0;
             text-align: center;
         }
-          
+
           input[type="text"],
           input[type="password"],
           input[type="date"],
@@ -161,7 +191,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           input[type="time"],
           input[type="url"],
           textarea,
-          
+
           select {
             background: rgba(255,255,255,0.1);
             border: none;
@@ -176,18 +206,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
             margin-bottom: 30px;
           }
-          
+
           input[type="radio"],
           input[type="checkbox"] {
             margin: 0 4px 8px 0;
           }
-          
+
           select {
             padding: 6px;
             height: 32px;
             border-radius: 2px;
           }
-          
+
           button {
             padding: 19px 39px 18px 39px;
             color: #FFF;
@@ -206,27 +236,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             background-color: orange;
             border: 1px solid orange;
           }
-          
+
           fieldset {
             margin-bottom: 30px;
             border: none;
           }
-          
+
           legend {
             font-size: 1.4em;
             margin-bottom: 10px;
           }
-          
+
           label {
             display: block;
             margin-bottom: 8px;
           }
-          
+
           label.light {
             font-weight: 300;
             display: inline;
           }
-          
+
           .number {
             background-color: #fe5b3d;
             color: #fff;
@@ -240,74 +270,44 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             text-shadow: 0 1px 0 rgba(255,255,255,0.2);
             border-radius: 100%;
           }
-          
+
+          .output {
+            margin-top: 20px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 6px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            width: 100%;
+            max-width: 435px;
+          }
+
           @media screen and (min-width: 480px) {
-          
+
             form {
               max-width: 480px;
             }
-          
+
           }
     </style>
 </head>
 <body>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Sign Up</title>
-        <link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
-    </head>
-    <body>
-        <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = $_POST['user_email'];
-    $password = $_POST['user_password'];
+    <form action="sign-up.php" method="post">
 
-    // Email regex validation
-    if (!preg_match(
-        '/^[a-zA-Z0-9-.]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/',
-        $email
-    )) {
-        echo "Email adresa nuk është valide.<br>";
-    } else {
-        echo "Email adresa është valide.<br>";
-    }
-
-    // Password regex validation
-    // Check if password contains only letters
-    if (preg_match('/^[a-zA-Z]+$/', $password)) {
-        echo "Fjalëkalimi përmban vetëm shkronja. Ju lutem shtoni numra.<br>";
-    }
-    // Check if password contains only numbers
-    elseif (preg_match('/^[0-9]+$/', $password)) {
-        echo "Fjalëkalimi përmban vetëm numra. Ju lutem shtoni shkronja.<br>";
-    }
-    // Check if password contains both letters and numbers
-    elseif (preg_match('/^[a-zA-Z0-9]+$/', $password)) {
-        echo "Fjalëkalimi është valide (përmban shkronja dhe numra).<br>";
-        // Add further processing logic here if needed
-    } else {
-        echo "Fjalëkalimi nuk është valide. Përdorni vetëm shkronja dhe numra.<br>";
-    }
-}
-?>
-      <form action="sign-up.php" method="post">
-      
         <h1>Sign Up</h1>
-        
+
         <fieldset>
           <legend>Your info</legend>
           <label for="name">Name:</label>
           <input type="text" id="name" name="user_name" placeholder="username" required>
-          
+
           <label for="mail">Email:</label>
           <input type="email" id="mail" name="user_email" placeholder="name@email.com" required>
-          
+
           <label for="password">Password:</label>
           <input type="password" id="password" name="user_password" placeholder="password" required>
-          
+
           <label>Gender:</label>
-          <input type="radio" id="female" value="female" name="user_gender"><label for=female" class="light">Female</label><br>
+          <input type="radio" id="female" value="female" name="user_gender"><label for="female" class="light">Female</label><br>
           <input type="radio" id="male" value="male" name="user_gender"><label for="male" class="light">Male</label><br>
           <br>
           <label>Age:</label>
@@ -315,7 +315,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           <input type="radio" id="adult" value="Adult" name="user_age"><label for="adult" class="light">19-30</label><br>
           <input type="radio" id="senior" value="Senior" name="user_age"><label for="senior" class="light">31-65</label>
         </fieldset>
-        
+
         <fieldset>
           <legend>Your profile</legend>
           <label for="bio">Bio:</label>
@@ -334,7 +334,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <option value="Jaguar">Jaguar</option>
             <option value="Volkswagen">Volkswagen</option>
         </select>
-        
+
           <label>Interests:</label>
           <input type="checkbox" id="suvs" value="interest_development" name="user_interest"><label class="light" for="development">SUVs</label><br>
           <input type="checkbox" id="sport" value="interest_design" name="user_interest"><label class="light" for="design">Sport Cars</label><br>
@@ -348,8 +348,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <button type="submit">Sign Up</button>
         <p class="sign-in">I have an account! <a href="sign-in.php">Sign In</a></p>
       </form>
-      
+
+      <?php if ($output): ?>
+          <div class="output">
+              <?php echo $output; ?>
+          </div>
+      <?php endif; ?>
+
     </body>
-</html>
-</body>
 </html>
