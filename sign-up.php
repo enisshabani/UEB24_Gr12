@@ -258,6 +258,38 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
     </head>
     <body>
+        <?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $email = $_POST['user_email'];
+    $password = $_POST['user_password'];
+
+    // Email regex validation
+    if (!preg_match(
+        '/^[a-zA-Z0-9-.]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/',
+        $email
+    )) {
+        echo "Email adresa nuk është valide.<br>";
+    } else {
+        echo "Email adresa është valide.<br>";
+    }
+
+    // Password regex validation
+    // Check if password contains only letters
+    if (preg_match('/^[a-zA-Z]+$/', $password)) {
+        echo "Fjalëkalimi përmban vetëm shkronja. Ju lutem shtoni numra.<br>";
+    }
+    // Check if password contains only numbers
+    elseif (preg_match('/^[0-9]+$/', $password)) {
+        echo "Fjalëkalimi përmban vetëm numra. Ju lutem shtoni shkronja.<br>";
+    }
+    // Check if password contains both letters and numbers
+    elseif (preg_match('/^[a-zA-Z0-9]+$/', $password)) {
+        echo "Fjalëkalimi është valide (përmban shkronja dhe numra).<br>";
+        // Add further processing logic here if needed
+    } else {
+        echo "Fjalëkalimi nuk është valide. Përdorni vetëm shkronja dhe numra.<br>";
+    }
+}
 
       <form action="sign-up.php" method="post">
       
