@@ -216,7 +216,7 @@ form button:hover {
 
          <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = $_POST['email'];
+    $email = $_POST['email'];    
     $password = $_POST['password'];
     $default_email = "test@gmail.com";
 
@@ -237,53 +237,66 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
-</style>
-</head>
-<body>
-  <div class="login_form">
-    <!-- Login form container -- Enis Morina -->
-    
-    <form action="#" methode="POST">
-      <h3>Log in with</h3>
-      <div class="login_option">
-        <!-- Google button -->
-        <div class="option">
-          <a href="#">
-            <img src="img/google.png" alt="Google" />
-            <span>Google</span>
-          </a>
-        </div>
-        <!-- Apple button -->
-        <div class="option">
-          <a href="#">
-            <img src="img/apple.png" alt="Apple" />
-            <span>Apple</span>
-          </a>
-        </div>
-      </div>
-      <!-- Login option separator -->
-      <p class="separator">
-        <span>or</span>
-      </p>
 
-      <!-- Email input box -- Enis Shabani -->
+      <form action="sign-up.php" method="post">
+      
+        <h1>Sign Up</h1>
+        
+        <fieldset>
+          <legend>Your info</legend>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="user_name" placeholder="username" required>
+          
+          <label for="mail">Email:</label>
+          <input type="email" id="mail" name="user_email" placeholder="name@email.com" required>
+          
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="user_password" placeholder="password" required>
+          
+          <label>Gender:</label>
+          <input type="radio" id="female" value="female" name="user_gender"><label for=female" class="light">Female</label><br>
+          <input type="radio" id="male" value="male" name="user_gender"><label for="male" class="light">Male</label><br>
+          <br>
+          <label>Age:</label>
+          <input type="radio" id="teenage" value="Teenage" name="user_age"><label for="teenage" class="light">0-18</label><br>
+          <input type="radio" id="adult" value="Adult" name="user_age"><label for="adult" class="light">19-30</label><br>
+          <input type="radio" id="senior" value="Senior" name="user_age"><label for="senior" class="light">31-65</label>
+        </fieldset>
+        
+        <fieldset>
+          <legend>Your profile</legend>
+          <label for="bio">Bio:</label>
+          <textarea id="bio" name="user_bio"></textarea>
+        </fieldset>
+        <fieldset>
+        <label for="car">Select the brand you like:</label>
+        <select id="car" name="user_car">
+            <option value="BMW">BMW</option>
+            <option value="Hyundai">Hyundai</option>
+            <option value="Tesla">Tesla</option>
+            <option value="Audi"> Audi</option>
+            <option value="Mercedes">Mercedes</option>
+            <option value="Alfa-Romeo">Alfa-Romeo</option>
+            <option value="Ford">Ford</option>
+            <option value="Jaguar">Jaguar</option>
+            <option value="Volkswagen">Volkswagen</option>
+        </select>
+        
+          <label>Interests:</label>
+          <input type="checkbox" id="suvs" value="interest_development" name="user_interest"><label class="light" for="development">SUVs</label><br>
+          <input type="checkbox" id="sport" value="interest_design" name="user_interest"><label class="light" for="design">Sport Cars</label><br>
+          <input type="checkbox" id="electrical" value="interest_business" name="user_interest"><label class="light" for="business">Electrical Vehicles</label><br>
+          <input type="checkbox" id="sudan" value="interest_business" name="user_interest"><label class="light" for="business">Sedans</label>
 
-      <div class="input_box">
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email" placeholder="Enter email address" required />
-      </div>
-      <!-- Paswwrod input box -->
-      <div class="input_box">
-        <div class="password_title">
-          <label for="password">Password</label>
-          <a href="#">Forgot Password?</a>
-        </div>
-        <input type="password" name="password" id="password" placeholder="Enter your password" required />
-      </div>
-       <!-- Login button -->
-      <button type="submit">Log In</button>
-      <p class="sign_up">Don't have an account? <a href="#">Sign up</a></p>
-    </form>
-  </div>
+          <label for="admin">Are you an administrator?</label>
+          <input type="radio" name="user_role" id="user_role" value="Yes"><label for="">Yes</label>
+          <input type="radio" name="user_role" id="user_role" value="No"><label>No</label>
+        </fieldset>
+        <button type="submit">Sign Up</button>
+        <p class="sign-in">I have an account! <a href="sign-in.html">Sign In</a></p>
+      </form>
+      
+    </body>
+</html>
 </body>
 </html>
