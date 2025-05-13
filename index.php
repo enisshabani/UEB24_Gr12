@@ -85,8 +85,8 @@ echo "Çmimi normal për makinat është: $" . number_format($normalPrice,2);
       </ul>
 
       <div class="header-btn">
-        <a href="sign-in.html" class="sign-in" >Sign In</a>
-        <a href="sign-up.html" class="sign-up">Sign Up</a>
+        <a href="sign-in.php" class="sign-in" >Sign In</a>
+        <a href="sign-up.php" class="sign-up">Sign Up</a>
       </div>
     </header>
 
@@ -233,8 +233,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <img src="img/audis6.avif" alt="">
             <p>2025</p>
             <h3>Audi S6 e-tron</h3>
-            <h2>$78000 | $6500 <span>/month</span></h2>
-            <a href="#" class="btn">Rent Now</a>
+            <h2>$78000 | $3250 <span>/month</span></h2>
+            <a href="CarRent/Audi_S6_e-tron.html" class="btn">Rent Now</a>
           </div>
         </div>
 
@@ -243,8 +243,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <img src="img/acura.avif" alt="">
             <p>2025</p>
             <h3>Acura Integra Type S</h3>
-            <h2>$53000 | $6500 <span>/month</span></h2>
-            <a href="#" class="btn">Rent Now</a>
+            <h2>$53000 | $2210 <span>/month</span></h2>
+            <a href="CarRent/acura.html" class="btn">Rent Now</a>
           </div>
         </div>
 
@@ -254,8 +254,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           </div>
           <p>2025</p>
           <h3>BMW Gran Coupe</h3>
-          <h2>$40770| $6500 <span>/month</span></h2>
-          <a href="#" class="btn">Rent Now</a>
+          <h2>$40770| $1700 <span>/month</span></h2>
+          <a href="CarRent/bmw1.html" class="btn">Rent Now</a>
         </div>
 
         <div class="box">
@@ -264,8 +264,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           </div>
           <p>2025</p>
           <h3>Ford Escape</h3>
-          <h2>$30000 | $6500 <span>/month</span></h2>
-          <a href="#" class="btn">Rent Now</a>
+          <h2>$30000 | $1250 <span>/month</span></h2>
+          <a href="CarRent/ford.html" class="btn">Rent Now</a>
         </div>
 
         <div class="box">
@@ -274,8 +274,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           </div>
           <p>2024</p>
           <h3>Jaguar XF</h3>
-          <h2>$51000 | $6500 <span>/month</span></h2>
-          <a href="#" class="btn">Rent Now</a>
+          <h2>$51000 | $2125 <span>/month</span></h2>
+          <a href="CarRent/jaguar.html" class="btn">Rent Now</a>
         </div>
 
         <div class="box">
@@ -284,8 +284,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           </div>
           <p>2025</p>
           <h3>Bmw X-Drive</h3>
-          <h2>$46000 | $6500 <span>/month</span></h2>
-          <a href="#" class="btn">Rent Now</a>
+          <h2>$46000 | $1920 <span>/month</span></h2>
+          <a href="CarRent/bmw2.html" class="btn">Rent Now</a>
         </div>
       </div>
 

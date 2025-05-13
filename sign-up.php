@@ -290,7 +290,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Fjalëkalimi nuk është valide. Përdorni vetëm shkronja dhe numra.<br>";
     }
 }
-
+?>
       <form action="sign-up.php" method="post">
       
         <h1>Sign Up</h1>
@@ -346,7 +346,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           <input type="radio" name="user_role" id="user_role" value="No"><label>No</label>
         </fieldset>
         <button type="submit">Sign Up</button>
-        <p class="sign-in">I have an account! <a href="sign-in.html">Sign In</a></p>
+        <p class="sign-in">I have an account! <a href="sign-in.php">Sign In</a></p>
       </form>
       
     </body>

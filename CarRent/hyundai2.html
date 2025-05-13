@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Card</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #fe5b3d;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .product-card {
+            max-width: 800px;
+            height: 80%;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin: 0 auto;
+            display: flex;
+        }
+        
+        .product-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .product-image img {
+            max-width: 400px;
+            max-height: 400px;
+            border-radius: 8px;
+        }
+
+        .product-info {
+            padding: 20px;
+            flex: 1;
+        }
+        
+        .product-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .product-dimensions {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .details-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        
+        .detail-label {
+            color: #666;
+        }
+        
+        .detail-value {
+            font-weight: bold;
+        }
+        
+        .price-section {
+            margin: 20px 0;
+            padding: 15px 0;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+        
+        .original-price {
+            text-decoration: line-through;
+            color: #999;
+        }
+        
+        .discount-percentage {
+            color: #e53935;
+            font-weight: bold;
+        }
+        
+        .current-price {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .installment {
+            font-size: 14px;
+            color: #666;
+            margin-top: 5px;
+        }
+        
+        .delivery-info {
+            font-size: 14px;
+            margin: 15px 0;
+            color: #666;
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .add-to-cart {
+            flex: 1;
+            background-color: #000000;
+            color: #ffffff;
+            border: 1px solid #000000;
+            padding: 12px;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+        }
+        
+        .add-to-cart:hover{
+            color: #ff5e14;
+            border: 1px solid #ff5e14;
+            background-color: #fff;
+            transition: background-color 400ms, color 200ms;
+        }
+        .quantity {
+            width: 60px;
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 11px;
+        }
+        
+        .payment-methods {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+        .firm-logos {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+    
+        .firm-logo {
+            width: 50px;
+            height: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="product-card">
+
+        <div class="product-image">
+            <img src="../img/hyundais.avif" alt="">
+        </div>
+    
+        <div class="product-info">
+            <div class="product-title">Hyundai Sonata</div>
+            
+            <div class="details-row">
+                <span class="detail-label">Numri i produkti:</span>
+                <span class="detail-value">MAR-2000034324</span>
+            </div>
+            <div class="details-row">
+                <span class="detail-label">Disponueshmëria:</span>
+                <span class="detail-value">300+</span>
+            </div>
+            <div class="details-row">
+                <span class="detail-label">Transporti:</span>
+                <span class="detail-value">FALAS</span>
+            </div>
+            <div class="details-row">
+                <span class="detail-label">Brendi:</span>
+                <span class="detail-value">Hyundai</span>
+            </div>
+            
+            <div class="price-section">
+                <div class="price-row">
+                    <span class="original-price">€27500</span>
+                    <span class="discount-percentage">26%</span>
+                </div>
+                <div class="price-row">
+                    <span class="current-price">€19350</span>
+                </div>
+                <div class="price-row">
+                    <span class="installment">Paguaj deri në 24 këste, pa kamatë: €1145/muaj</span>
+                </div>
+            </div>
+            
+            <div class="action-buttons">
+                <input type="number" class="quantity" value="1" min="1">
+                <a class="add-to-cart" href="../creditcard.html">Rent Now</a>
+            </div>
+            
+            <div class="payment-methods">
+                Mundësi me këste: Raiffeisen, TEB ose NLB
+            </div>
+            <div class="firm-logos">
+                <img src="../img/Raiffeisen.jpg" alt="Raiffeisen" class="firm-logo">
+                <img src="../img/teb.png" alt="TEB" class="firm-logo">
+                <img src="../img/nlb.png" alt="NLB" class="firm-logo">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
