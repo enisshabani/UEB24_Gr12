@@ -267,7 +267,7 @@ form button:hover {
       <div class="input_box">
         <div class="password_title">
           <label for="password">Password</label>
-          <a href="#">Forgot Password?</a>
+          <a href="forgotPassword.html">Forgot Password?</a>
         </div>
         <input type="password" name="password" id="password" placeholder="Enter your password" required />
       </div>

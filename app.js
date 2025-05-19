@@ -33,7 +33,6 @@ serviceBoxes.forEach((box) => {
 
     box.addEventListener("mouseenter", () => {
         img.style.opacity = "0.5";
-        // description.style.display = "block";
     });
 
     box.addEventListener("mouseleave", () => {
@@ -208,7 +207,7 @@ function searchCar() {
     }
 }
 
-const countdownEndDate = new Date("2025-05-10T00:00:00").getTime();
+const countdownEndDate = new Date("2025-06-6T00:00:00").getTime();
 
 function updateCountdown() {
   const now = new Date().getTime();
